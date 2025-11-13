@@ -1,0 +1,58 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f6f8;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #1e88e5;
+	color: white;
+	text-align: center;
+	padding: 1rem 0;
+	font-size: 1.5rem;
+}
+
+nav {
+	background-color: #1565c0;
+	display: flex;
+	justify-content: center;
+}
+
+nav button {
+	background: none;
+	border: none;
+	color: white;
+	padding: 1rem;
+	cursor: pointer;
+	font-size: 1rem;
+	transition: background 0.3s;
+}
+
+nav button:hover {
+	background-color: #0d47a1;
+}
+
+#contenido {
+	padding: 2rem;
+	max-width: 700px;
+	margin: 2rem auto;
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.seccion {
+	display: none;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+.seccion.activa {
+	display: block;
+	opacity: 1;
+}
+
+h2 {
+	color: #1e88e5;
+}

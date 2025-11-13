@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./../../../css/reset.css" />
+		<link rel="stylesheet" href="./../../../css/global.css" />
+		<link rel="stylesheet" href="./../../../css/components/resumenes.css" />
+	</head>
+	<body>
+		<h2>1. Definición</h2>
+		<p>
+			Una <strong>integral impropia</strong> es una integral definida en
+			la que
+			<strong
+				>los límites de integración o la función integrando no cumplen
+				las condiciones de continuidad o finitud</strong
+			>
+			necesarias para aplicar directamente la definición de integral
+			definida de Riemann.
+		</p>
+		<p>En otras palabras, son aquellas integrales en las que:</p>
+		<ul>
+			<li>
+				El intervalo de integración es <strong>infinito</strong> (por
+				ejemplo, $[a, +\infty)$ o $(-\infty, b]$.
+			</li>
+			<li>
+				O bien, la función
+				<strong>tiene una discontinuidad infinita</strong> dentro del
+				intervalo (por ejemplo, se hace infinita en algún punto del
+				intervalo).
+			</li>
+		</ul>
+		<p>
+			Estas integrales se evalúan <strong>como límites</strong>, es decir:
+		</p>
+		<p>
+			$$ \int_a^{+\infty} f(x),dx = \lim_{b \to +\infty} \int_a^b f(x),dx
+			$$
+		</p>
+		<p>o</p>
+		<p>
+			$$ \int_a^b f(x),dx = \lim_{c \to a^+} \int_c^b f(x),dx \quad
+			\text{si } f(x) \text{ es infinita en } x=a $$
+		</p>
+		<blockquote>
+			<p>
+				Si el límite existe y es finito, la integral
+				<strong>converge</strong>.<br />
+				Si el límite no existe o es infinito, la integral
+				<strong>diverge</strong>.
+			</p>
+		</blockquote>
+		<hr />
+		<h2>
+			Tipos de integrales impropias: Primera, segunda y tercera especie.
+		</h2>
+		<p>
+			Las integrales impropias se clasifican en tres especies principales
+			según la causa de su impropiedad:
+		</p>
+		<p><strong>a) Primera especie (por límites infinitos)</strong></p>
+		<p>
+			Son aquellas en las que
+			<strong>uno o ambos límites de integración son infinitos</strong>.
+		</p>
+		<p>
+			Ejemplo 1:<br />
+			$$ \int_1^{+\infty} \frac{1}{x^2} dx $$
+		</p>
+		<p>
+			Se calcula como:<br />
+			$$ \lim_{b \to +\infty} \int_1^b \frac{1}{x^2} dx = \lim_{b \to
+			+\infty} \left(1 - \frac{1}{b}\right) = 1 $$<br />
+			✅ **Converge**.
+		</p>
+		<p>
+			Ejemplo 2:<br />
+			$$ \int_1^{+\infty} \frac{1}{x} dx = \lim_{b \to +\infty} \ln b =
+			+\infty $$<br />
+			❌ **Diverge**.
+		</p>
+		<hr />
+		<p>b) Segunda especie (por discontinuidad infinita del integrando)</p>
+		<p>
+			Aparece cuando la función
+			<strong
+				>se hace infinita dentro del intervalo de integración</strong
+			>
+			(en los límites o en un punto intermedio).
+		</p>
+		<p>
+			Ejemplo:<br />
+			$$ \int_0^1 \frac{1}{\sqrt{x}} dx = \lim_{c \to 0^+} \int_c^1
+			x^{-1/2} dx $$<br />
+			$$ = \lim_{c \to 0^+} [2(1 - \sqrt{c})] = 2 $$<br />
+			✅ **Converge**.
+		</p>
+		<p>
+			Otro ejemplo:<br />
+			$$ \int_0^1 \frac{1}{x} dx = \lim_{c \to 0^+} \ln 1 - \ln c =
+			+\infty $$<br />
+			❌ **Diverge**.
+		</p>
+		<hr />
+		<p>c) Tercera especie (combinada)</p>
+		<p>
+			Se presenta cuando
+			<strong>coexisten ambos tipos de impropiedad</strong>:
+		</p>
+		<ul>
+			<li>
+				<p>El intervalo es infinito, <strong>y</strong></p>
+			</li>
+			<li>
+				<p>
+					La función tiene una discontinuidad infinita en algún punto.
+				</p>
+			</li>
+		</ul>
+		<p>
+			Ejemplo:<br />
+			$$ \int_{-\infty}^{+\infty} \frac{1}{1 + x^2} dx $$<br />
+			Aquí el intervalo es infinito, pero el integrando es continua.<br />
+			Se puede resolver como:<br />
+			$$ \lim_{a \to -\infty,, b \to +\infty} \int_a^b \frac{1}{1 + x^2}
+			dx = \pi $$<br />
+			✅ **Converge**.
+		</p>
+		<p>
+			Otro ejemplo (con singularidad y dominio infinito):<br />
+			$$ \int_{-\infty}^{+\infty} \frac{1}{x} dx $$<br />
+			No converge porque la función tiene una discontinuidad infinita en
+			(x=0).
+		</p>
+		<hr />
+		<h2>Valor principal de las integrales impropias de tercera especie.</h2>
+		<p>
+			Cuando una integral diverge por tener una
+			<strong>discontinuidad en el centro del intervalo</strong>, como
+			en:<br />
+			$$<br />
+			\int_{-a}^{a} \frac{1}{x} dx<br />
+			$$<br />
+			su valor **no existe como integral impropia ordinaria**.
+		</p>
+		<p>
+			Sin embargo, se define su
+			<strong>valor principal de Cauchy</strong>, que intenta “compensar”
+			las partes simétricas:
+		</p>
+		<p>
+			$$<br />
+			\text{P.V.} \int_{-a}^{a} \frac{1}{x} dx = \lim_{b \to a^-}
+			\int_{-b}^{b} \frac{1}{x} dx<br />
+			$$
+		</p>
+		<p>
+			En este caso:<br />
+			$$<br />
+			\int_{-b}^{b} \frac{1}{x} dx = [\ln|x|]_{-b}^{b} = 0<br />
+			$$<br />
+			Por lo tanto:<br />
+			$$<br />
+			\text{P.V.} \int_{-a}^{a} \frac{1}{x} dx = 0<br />
+			$$
+		</p>
+		<blockquote>
+			<p>
+				El <strong>valor principal</strong> es útil en física y
+				matemáticas aplicadas, especialmente en
+				<strong>transformadas de Fourier</strong>,
+				<strong>electromagnetismo</strong> y
+				<strong>teoría de señales</strong>, donde la simetría compensa
+				las divergencias.
+			</p>
+		</blockquote>
+		<hr />
+		<h2>Propiedades de las funciones Gamma y Beta.</h2>
+		<p>
+			Estas funciones aparecen al evaluar muchas integrales impropias,
+			sobre todo en análisis, probabilidad y física.
+		</p>
+		<hr />
+		<p><strong>a) Función Gamma (Γ)</strong></p>
+		<p>
+			Definición:<br />
+			$$ \Gamma(n) = \int_0^{+\infty} x^{n-1} e^{-x} , dx = \int_{0}^{1}
+			(-\ln(z))^{n-1} , dz $$
+		</p>
+		<p>Propiedades:</p>
+		<ol>
+			<li>$\Gamma(1) = 1$</li>
+			<li>$\Gamma(n+1) = n \Gamma(n)$</li>
+			<li>Para enteros positivos, $\Gamma(n+1) = n!$</li>
+			<li>$\Gamma\left(\frac{1}{2}\right) = \sqrt{\pi}$</li>
+		</ol>
+		<hr />
+		<p><strong>b) Función Beta (B)</strong></p>
+		<p>
+			Definición:<br />
+			$$ B(m;n) = \int_0^1 x^{m-1}(1-x)^{n-1} dx $$
+		</p>
+		<p>
+			Relación con Gamma:<br />
+			$$ B(p ; q) = \frac{\Gamma(m) \Gamma(n)}{\Gamma(m + n)} $$
+		</p>
+		<p>Propiedades:</p>
+		<ol>
+			<li>
+				$\beta (m ; n) = \int_{0}^{\infty} \dfrac{x^{m-1}}{(1+x)^{m+n}}$
+			</li>
+			<li>
+				$\int_{0}^{\frac{\pi}{2}} \mathrm{sin} (\theta)^{2m-1}
+				\mathrm{cos} (\theta)^{2n-1} d \theta = \dfrac{\beta (m ;
+				n)}{2}$
+			</li>
+			<li>
+				$\beta (m ; n) = \frac{n - 1}{m} \beta (m + 1 ; n - 1) = \frac{m
+				- 1}{n} \beta (m - 1 ; n + 1)$
+			</li>
+		</ol>
+		<hr />
+		<h2>Aplicaciones de apoyo a diversas disciplinas.</h2>
+		<p>
+			Las integrales impropias tienen un papel central en distintas áreas
+			del conocimiento:
+		</p>
+		<p><strong>a) Física</strong></p>
+		<ul>
+			<li>
+				Cálculo de trabajo, energía o masa cuando los límites son
+				infinitos.
+			</li>
+			<li>
+				Determinación de campos eléctricos y magnéticos (Ley de Gauss,
+				Coulomb).
+			</li>
+			<li>
+				Cálculo de probabilidades en distribuciones continuas (como la
+				gaussiana).
+			</li>
+		</ul>
+		<p><strong>b) Ingeniería</strong></p>
+		<ul>
+			<li>
+				Análisis de señales y sistemas (Transformadas de Fourier y
+				Laplace).
+			</li>
+			<li>
+				Estudio del comportamiento asintótico de sistemas dinámicos.
+			</li>
+			<li>
+				Cálculo de corrientes, potenciales o temperaturas en medios
+				infinitos.
+			</li>
+		</ul>
+		<p><strong>c) Matemática avanzada</strong></p>
+		<ul>
+			<li>
+				Resolución de ecuaciones diferenciales mediante transformadas
+				integrales.
+			</li>
+			<li>Evaluación de series mediante integrales.</li>
+			<li>
+				Cálculo de funciones especiales (Gamma, Beta, error, Bessel,
+				etc.)
+			</li>
+		</ul>
+		<h4><strong>d) Estadística y probabilidad</strong></h4>
+		<ul>
+			<li>
+				Modelos continuos de probabilidad como la
+				<strong>distribución normal</strong>:<br />
+				$$ \int_{-\infty}^{+\infty} e^{-x^2} dx = \sqrt{\pi} $$<br />
+				(derivado de la función Gamma).
+			</li>
+		</ul>
+
+		<a href="./../../../Index.html"></a>
+		<script src="js/mathjax-config.js"></script>
+		<script src="mathjax/es5/tex-mml-chtml.js"></script>
+	</body>
+</html>

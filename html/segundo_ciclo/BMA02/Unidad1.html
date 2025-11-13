@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>unidad 1 calculo integral</title>
+		<link rel="stylesheet" href="./../../../css/reset.css" />
+		<link rel="stylesheet" href="./../../../css/global.css" />
+		<link rel="stylesheet" href="./../../../css/components/resumenes.css" />
+	</head>
+	<body>
+		<h2>El operador derivada. Definición. Propiedad fundamental.</h2>
+		<p>
+			El <strong>operador derivada</strong> se denota por<br />
+			$D = \frac{d}{dx}$ y representa la acción de
+			<strong>diferenciar</strong> una función respecto a una variable,
+			normalmente $x$.
+		</p>
+		<p>
+			Si $y = f(x)$, entonces: $$ D(f) = \frac{df}{dx} = f^{\prime} (x) $$
+		</p>
+		<p>
+			Es decir, el operador derivada transforma una función en otra que
+			mide su <strong>tasa de cambio instantánea</strong>.
+		</p>
+		<p><strong>Propiedad fundamental</strong></p>
+		<p>
+			El operador derivada es <strong>lineal</strong>, lo que significa
+			que cumple: $$ D(af + bg) = aD(f) + bD(g) $$ para cualesquiera
+			constantes $a , b$ y funciones $f, g$ .
+		</p>
+		<p>Además, cumple las reglas de derivación:</p>
+		<ul>
+			<li>
+				<strong>Producto:</strong> $D(fg) = f^{\prime} g + f g^{\prime}$
+			</li>
+			<li>
+				<strong>Cociente:</strong> $D\left(\frac{f}{g}\right) =
+				\frac{f^{\prime} g - f g^{\prime}}{g^2}$
+			</li>
+			<li>
+				<strong>Composición:</strong> $D(f(g(x))) = f^{\prime} (g(x))
+				\cdot g^{\prime} (x)$
+			</li>
+		</ul>
+		<h2>
+			La inversa del operador derivada. Interpretación: La antiderivada,
+			la primitiva.
+		</h2>
+		<h3>Definición</h3>
+		<p>
+			la antiderivada o función primitiva de $f(x)$ se denota por $Antd
+			(f(x))$ y su valor esta definido por:
+		</p>
+		<p>
+			$Antd (f(x)) = F(x) + k$ tal que $F'(x) = f(x)$ en cierto intervalo
+			${\mathbb{I}}$
+		</p>
+		<h3>antiderivadas</h3>
+		<p>
+			$$ Antd (a f(x)) = a \cdot Antd (f(x)) ; a = cte $$ $$ Antd (f(x)
+			\pm h(x)) = Antd (f(x)) \pm Antd(h(x)) $$ $$ Antd \left(
+			\frac{f(x)}{F(x)} \right) = \ln \left| F(x) \right| $$
+		</p>
+		<h2>Integral indefinida. Propiedades.</h2>
+		<p>
+			$$ \int b f_{(x)} , dx = b \int f_{(x)} , dx , \quad b = \text{cte}
+			$$ $$ \int ( b_{1} f_{1(x)} \pm b_{2} f_{2(x)} ) , dx = b_{1} \int
+			f_{1(x)} , dx \pm b_{2} \int f_{2(x)} , dx $$ $$ \int dF_{(x)} =
+			F_{(x)} + K $$ $$ d \int f_{(x)} , dx = f_{(x)} , dx $$ $$ D_{(x)}
+			\int f_{(x)} , dx = f_{(x)} $$ $$ \text{si } \int f_{(x)} , dx =
+			F_{(x)} + K \rightarrow \int f_{(ax)} , dx = \frac{F(ax)}{a} + K $$
+			$$ \text{si } \int f_{(x)} , dx = F_{(x)} + K \rightarrow \int
+			f_{(x+b)} , dx = F(x+b) + K $$ $$ \text{si } \int f_{(x)} , dx =
+			F_{(x)} + K \rightarrow \int f_{(ax + b)} , dx = \frac{F(ax + b)}{a}
+			+ K $$ $$ \int f_{(x)} \cdot g_{(x)} , dx \neq \int f_{(x)} , dx
+			\cdot \int g_{(x)} , dx $$ $$ \int \frac{f_{(x)}}{g_{(x)}} , dx \neq
+			\frac{\int f_{(x)} , dx}{\int g_{(x)} , dx} $$
+		</p>
+		<h2>
+			Antiderivadas de funciones elementales: Tabla. Integrales
+			inmediatas.
+		</h2>
+		<p>
+			Sea $F(x)$ la primitiva de la función $f(x)$ ; entonces la expresión
+			$F(x) + k$ es el valor de la integral indefinida de $f(x)$
+			diferencial $x$ que se expresa por:
+		</p>
+		<p>$$ \int f(x) dx = F(x) + k $$</p>
+		<h3>fórmulas elementales de integración</h3>
+		<ul>
+			<li><strong>Potencias y exponenciales simples</strong></li>
+		</ul>
+		<p>
+			$$\int dv = v + k $$ $$ \int v^{m} dv = \frac{v^{m + 1}}{m + 1} + k
+			; m \neq - 1 $$ $$ \int v^{- 1} dv = \int \frac{dv}{v} = \ln |v| + k
+			$$ $$ \int e^{v} dv = e^{v} + k $$ $$ \int a^{v} dv =
+			\frac{a^{v}}{\ln a} + k $$
+		</p>
+		<ul>
+			<li><strong>Trigonométricas básicas y de potencias</strong></li>
+		</ul>
+		<p>
+			$$ \int \sin (v) dv = - \cos (v) + k $$ $$ \int \cos (v) dv = \sin
+			(v) + k $$ $$ \int \tan (v) dv = - \ln |\cos(v)| + k = \ln |\sec(v)|
+			+ k $$ $$ \int \cot (v) dv = \ln |\sin(v)| + k $$ $$ \int \sec^{2}
+			(v) dv = \tan (v) + k $$ $$ \int \csc^{2} (v) dv = - \cot (v) + k $$
+			$$ \int \sec (v) \cdot \tan (v) dv = \sec (v) + k $$ $$ \int \csc
+			(v) \cdot \cot (v) dv = - \csc (v) + k $$ $$ \int \sec (v) dv = \ln
+			|\sec(v) + \tan (v)| + k $$ $$ \int \csc (v) dv = \ln |\csc(v) -
+			\cot (v)| + k $$ $$ \int \sec ^{3} (v) dv = \frac{1}{2} \sec (v)
+			\cdot \tan (v) + \frac{1}{2} \ln |\sec(v) + \tan (v)| + k $$ $$ \int
+			\csc ^{3} (v) dv = \frac{1}{2} \csc (v) \cdot \cot (v) + \frac{1}{2}
+			\ln |\csc(v) - \cot (v)| + k $$
+		</p>
+		<ul>
+			<li><strong>Trigonométricas inversas</strong></li>
+		</ul>
+		<p>
+			$$ \int \frac{dv}{\sqrt{a^{2} - v^{2}}} = \arcsin \left( \frac{v}{a}
+			\right) + k $$ $$ \int \frac{dv}{|v| \sqrt{a^{2} - v^{2}}} =
+			\frac{1}{a} \mathrm{arcsec} \left( \frac{v}{a} \right) + k $$ $$
+			\int \frac{dv}{v^{2} + a^{2}} = \frac{1}{a} \mathrm {arctan} \left(
+			\frac{v}{a} \right) + k $$ $$ \int \frac{dv}{v^{2} - a^{2}} =
+			\frac{1}{2a} \ln \left| \frac{v - a}{v + a} \right| + k $$ $$ \int
+			\frac{dv}{a^{2} - v^{2}} = \frac{1}{2a} \ln \left| \frac{a + v}{a -
+			v} \right| + k = \frac {1}{a} \mathrm{arctanh} \left( \frac{v}{a}
+			\right) (|v| &lt; a) = \frac {1}{a} \mathrm{arccoth} \left(
+			\frac{v}{a} \right) (|v| &gt; a) $$
+		</p>
+		<ul>
+			<li><strong>hiperbólicas</strong></li>
+		</ul>
+		<p>
+			$$ \int \mathrm{senh} (v) dv = \mathrm{cosh} (v) + K $$ $$ \int
+			\mathrm{cosh} (v) dv = \mathrm{senh} (x) + K $$ $$ \int
+			\mathrm{tanh} (v) dv = \mathrm{ln} \left| \mathrm{cosh} (v) \right|
+			+ K $$ $$ \int \mathrm{coth} (v) dv = \mathrm{ln} \left|
+			\mathrm{senh} (v) \right| + K $$ $$ \int \mathrm{sech}^{2} (v) dv =
+			\mathrm{tanh} (v) + K $$ $$ \int \mathrm{csch}^{2} (v) dv = -
+			\mathrm{coth} (v) + K $$ $$ \int \mathrm{sech} (v) \cdot
+			\mathrm{tanh} (v) dv = - \mathrm{sech} (v) + K $$ $$ \int
+			\mathrm{csch} (v) \cdot \mathrm{coth} (v) dv = - \mathrm{csch} (v) +
+			K $$ $$ \int \mathrm{sech} (v) dv = 2 \mathrm{arctan} (e^{v}) + K $$
+			$$ \int \mathrm{csch} (v) dv = \mathrm{ln} \left| \mathrm{tanh}
+			\left( \frac{v}{2} \right) \right| + K $$ $$ \int \mathrm{sech}^{3}
+			(v) dv = \frac{1}{2} \mathrm{sech} (v) \mathrm{tanh} (v) \frac{1}{2}
+			\mathrm{ln} \left| \mathrm{tanh} \left( \frac{v}{2} \right) \right|
+			+ K $$ $$ \int \mathrm{csch}^{3} (v) dv = \frac{1}{2} \mathrm{sech}
+			(v) \mathrm{tanh} (v) + \frac{1}{2} \mathrm{arctan} \left(
+			\mathrm{senh} (v) \right) + K $$
+		</p>
+		<ul>
+			<li><strong>otros</strong></li>
+		</ul>
+		<p>
+			$$ \int \frac{dv}{\sqrt{v^{2} + a^{2}}} = \mathrm{ln} \left| v +
+			\sqrt{v^{2} + a^{2}} \right| + K = \mathrm{arcsenh} \left(
+			\frac{v}{a} \right) + K $$ $$ \int \frac{dv}{\sqrt{v^{2} - a^{2}}} =
+			\mathrm{ln} \left| v + \sqrt{v^{2} - a^{2}} \right| + K =
+			\mathrm{arccosh} \left( \frac{v}{a} \right) + K $$ $$ \int
+			\frac{dv}{v \sqrt{a^{2} + v^{2}}} = -\frac{1}{a} \mathrm{arcsech}
+			\left( \frac{v}{a} \right) + K $$ $$ \int \frac{dv}{v \sqrt{a^{2} +
+			v^{2}}} = -\frac{1}{a} \mathrm{arccsch} \left( \frac{|v|}{a} \right)
+			+ K $$ $$ \int \mathrm{ln} (v) dv = v ( \mathrm{ln} (v) - 1 ) + K $$
+			$$ \int v \cdot e^{v} dv = e^{v} (v - 1) + K $$ $$ \int \sqrt{a^{2}
+			- v^{2}} dv = \frac{1}{2} \left( v \sqrt{a^{2} - v^{2}} + a^{2}
+			\mathrm{arcsen} \left( \frac{v}{a}\right) \right) + K $$ $$ \int
+			\sqrt{a^{2} + v^{2}} dv = \frac{1}{2} \left( v \sqrt{a^{2} + v^{2}}
+			+ a^{2} \mathrm{ln} \left| v + \sqrt{a^{2} + v^{2}} \right| \right)
+			+ K $$ $$ \int \sqrt{v^{2} - a^{2}} dv = \frac{1}{2} \left( v
+			\sqrt{v^{2} - a^{2}} - a^{2} \mathrm{ln} \left| v + \sqrt{v^{2} -
+			a^{2}} \right| \right) + K $$ $$ \int e^{pv} \mathrm{sen(qv)} dv =
+			\frac{e^{pv}}{p^{2} + q^{2}} (p \mathrm{sen(qv)} - q
+			\mathrm{cos(qv)}) + K $$ $$ \int e^{pv} \mathrm{cos(qv)} dv =
+			\frac{e^{pv}}{p^{2} + q^{2}} (p \mathrm{cos(qv)} - q
+			\mathrm{sen(qv)}) + K $$
+		</p>
+		<h2>Métodos de integración:</h2>
+		<h3>Cambio de variable.</h3>
+		<p>
+			teniendo $$ \int f(g(u)) \cdot g'(u) du $$ sea diferenciable $$ z =
+			g(u) \to dz = g'(u) du $$ $$ \int f(z) dz = F(z) + K = F(g(u)) + K
+			$$
+		</p>
+		<h3>Integración por partes.</h3>
+		<p>
+			$$ d(u \cdot v) = u dv + v du $$ $$ \int d(u \cdot v) = \int u dv +
+			\int y dv $$ $$ \int u dv = \int d(u \cdot v) + \int v du $$
+		</p>
+		<p>se obtiene</p>
+		<p>$$ \int u dv = u \cdot v + \int v du $$</p>
+		<h3>Sustitución trigonométrica e hiperbólica.</h3>
+		<p>teniendo:</p>
+		<p>$$ \int H(x , \sqrt{px^{2} + qx + r}) dx $$</p>
+		<p>puedes</p>
+		<p>
+			$$ px^{2} + qx + r $$ $$ p \left( x^{2} + \frac{qx}{p} + \frac{r}{p}
+			\right) $$ $$ p \left( x^{2} + \frac{qx}{p} + \left( \frac{q}{2p}
+			\right)^{2} - \left( \frac{q}{2p} \right)^{2} + \frac{r}{p} \right)
+			$$ $$ p \left[ \left( x + \frac{q}{2p} \right)^{2} + \left(
+			\frac{r}{p} - \frac{q^{2}}{4p^{2}} \right) \right] $$
+		</p>
+		<p>obteniendo:</p>
+		<p>
+			$$ \int H \left( x , \sqrt{ p } \sqrt{ \left( x + \frac{q}{2p}
+			\right)^{2} + \left( \frac{r}{p} - \frac{q^{2}}{4p^{2}} \right)}
+			\right) dx $$
+		</p>
+		<p>tiene la forma de:</p>
+		<p>
+			$$ \int H \left( v - \frac{q}{2p} , \sqrt{ p } \sqrt{ \left( v
+			\right)^{2} + a^{2} } \right) dv $$
+		</p>
+		<h4>sustitución trigonométrica</h4>
+		<p><strong>CASO 1</strong></p>
+		<p>con:</p>
+		<p>$$ \int H_{1} \left( v , \sqrt{ a^{2} - v^{2} } \right) dv $$</p>
+		<p>se puede:</p>
+		<p>
+			$$ v = a \cdot \mathrm{sen} ( t ) $$ $$ dv = a \cdot \mathrm{cos} (
+			t ) dt $$ $$ \sqrt{ a^{2} - v^{2} } = \sqrt{ a^{2} - a^{2} \cdot
+			\mathrm{sen}^{2} (t) } = a \cdot \mathrm{cos} ( t ) $$
+		</p>
+		<p><strong>CASO 2</strong></p>
+		<p>con:</p>
+		<p>$$ \int H_{2} \left( v , \sqrt{ v^{2} + a^{2} } \right) dv $$</p>
+		<p>se puede:</p>
+		<p>
+			$$ v = a \cdot \mathrm{tan} ( t ) $$ $$ dv = a \cdot
+			\mathrm{sec}^{2} ( t ) dt $$ $$ \sqrt{ v^{2} + a^{2} } = \sqrt{
+			a^{2} + a^{2} \cdot \mathrm{tan}^{2} (t) } = a \cdot \mathrm{sec} (
+			t ) $$
+		</p>
+		<p><strong>CASO 3</strong></p>
+		<p>con:</p>
+		<p>$$ \int H_{3} \left( v , \sqrt{ v^{2} - a^{2} } \right) dv $$</p>
+		<p>se puede:</p>
+		<p>
+			$$ v = a \cdot \mathrm{sec} ( t ) $$ $$ dv = a \cdot \mathrm{sec} (
+			t ) \cdot \mathrm{tan} ( t ) dt $$ $$ \sqrt{ v^{2} - a^{2} } =
+			\sqrt{ a^{2} \cdot \mathrm{sec}^{2} (t) - a^{2} } = a \cdot
+			\mathrm{tan} ( t ) $$
+		</p>
+		<h4>sustitución hiperbólica</h4>
+		<p><strong>CASO 1</strong></p>
+		<p>con:</p>
+		<p>$$ \int R_{1} \left( u , \sqrt{ a^{2} - u^{2} } \right) du $$</p>
+		<p>se puede:</p>
+		<p>
+			$$ u = a \cdot \mathrm{tanh} ( z ) $$ $$ du = a \cdot
+			\mathrm{sech}^{2} ( z ) dz $$ $$ \sqrt{ a^{2} - u^{2} } = \sqrt{
+			a^{2} - a^{2} \cdot \mathrm{tanh}^{2} (z) } = a \cdot \mathrm{sech}
+			( z ) $$
+		</p>
+		<p><strong>CASO 2</strong></p>
+		<p>con:</p>
+		<p>$$ \int R_{2} \left( u , \sqrt{ u^{2} + a^{2} } \right) du $$</p>
+		<p>se puede:</p>
+		<p>
+			$$ u = a \cdot \mathrm{sinh} ( z ) $$ $$ du = a \cdot \mathrm{cosh}
+			( z ) dz $$ $$ \sqrt{ u^{2} + a^{2} } = \sqrt{ a^{2} + a^{2} \cdot
+			\mathrm{sinh}^{2} (z) } = a \cdot \mathrm{cosh} ( z ) $$
+		</p>
+		<p><strong>CASO 3</strong></p>
+		<p>con:</p>
+		<p>$$ \int R_{3} \left( u , \sqrt{ u^{2} - a^{2} } \right) du $$</p>
+		<p>
+			se puede: $$ u = a \cdot \mathrm{cosh} ( z ) $$ $$ du = a \cdot
+			\mathrm{sinh} ( z ) dz $$ $$ \sqrt{ u^{2} - a^{2} } = \sqrt{ a^{2}
+			\cdot \mathrm{cosh}^{2} (z) - a^{2} } = a \cdot \mathrm{sinh} ( z )
+			$$
+		</p>
+		<h2>
+			Integración de funciones racionales: Descomposición en fracciones
+			parciales.
+		</h2>
+		<p>
+			puedes transformas una fracción racional impropia a propia de la
+			siguiente forma:
+		</p>
+		<p>
+			$$ \int \frac{P(x)}{Q(x)} dx = \int \left[ C(x) + \frac{R(x)}{Q(x)}
+			\right] dx = \int C(x) dx + \int \frac{R(x)}{Q(x)} dx $$
+		</p>
+		<p><strong>CASO 1</strong></p>
+		<p>
+			$$ \frac{Q(x)}{(a_{1}x + b_{1})(a_{2}x + b_{2})(a_{3}x + b_{3})
+			\dots (a_{n}x + b_{n})} = \frac{A_{1}}{(a_{1}x + b_{1})} +
+			\frac{A_{2}}{(a_{2}x + b_{2})} + \frac{A_{3}}{(a_{3}x + b_{3})} +
+			\dots + \frac{A_{n}}{(a_{n}x + b_{n})} $$
+		</p>
+		<p>para hallar el valor de $A_k$ se usa el método algebraico</p>
+		<p>
+			$$ \frac{A_{k}}{a_{k}x + b_{k}} = \frac{Q(x)}{(a_{1}x +
+			b_{1})(a_{2}x + b_{2})(a_{3}x + b_{3}) \dots (a_{n}x + b_{n})}
+			\Bigg| {x = -\frac{b_{k}}{a_{k}}} $$
+		</p>
+		<p><strong>CASO 2</strong></p>
+		<p>
+			$$ \frac{Q(x)}{(x + a_{1})^{p}(x + a_{2})^{q} \dots (x + a_{n})^{r}}
+			= \frac{A_{1}}{(x + a_{1})} + \frac{A_{2}}{(x + a_{1})^{2}} + \dots
+			+ \frac{A_{p}}{(x + a_{1})^{p}} + \frac{B_{1}}{(x + a_{2})} + \dots
+			+ \frac{B_{q}}{(x + a_{2})^{q}} + \frac{C_{1}}{(x + a_{3})} + \dots
+			+ \frac{C_{r}}{(x + a_{3})^{r}} $$
+		</p>
+		<p><strong>CASO 3</strong></p>
+		<p>
+			$$ \frac{P(x)}{(a_{1}x^{2} + b_{1}x + c_{1})(a_{2}x^{2} + b_{2}x +
+			c_{2}) \dots (a_{n}x^{2} + b_{n}x + c_{n})} = \frac{A_{1}x +
+			B_{1}}{a_{1}x^{2} + b_{1}x + c_{1}} + \frac{A_{2}x +
+			B_{2}}{a_{2}x^{2} + b_{2}x + c_{2}} + \dots + \frac{A_{n}x +
+			B_{n}}{a_{n}x^{2} + b_{n}x + c_{n}} $$
+		</p>
+		<p>
+			$$ \Delta_{1} &lt; 0 ; , \Delta_{2} &lt; 0 ; , \dots ; , \Delta_{n}
+			= b_{n}^{2} - 4a_{n}c_{n} &lt; 0 $$
+		</p>
+		<p><strong>CASO 4</strong></p>
+		<p>
+			$$ \frac{P(x)}{(a_{1}x^{2} + b_{1}x + c_{1})^{p}(a_{2}x^{2} + b_{2}x
+			+ c_{2})^{q}} = \frac{A_{1}x + B_{1}}{a_{1}x^{2} + b_{1}x + c_{1}} +
+			\frac{A_{2}x + B_{2}}{(a_{1}x^{2} + b_{1}x + c_{1})^{2}} + \dots +
+			\frac{A_{p}x + B_{p}}{(a_{1}x^{2} + b_{1}x + c_{1})^{p}} +
+			\frac{C_{1}x + D_{1}}{a_{2}x^{2} + b_{2}x + c_{2}} + \dots +
+			\frac{C_{q}x + D_{q}}{(a_{2}x^{2} + b_{2}x + c_{2})^{q}} $$
+		</p>
+		<p>$$ \Delta_{n} = b_{n}^{2} - 4a_{n}c_{n} &lt; 0 $$</p>
+		<h2>Fórmulas de reducción o de recurrencia.</h2>
+		<p>
+			Una <strong>fórmula de reducción</strong> o
+			<strong>fórmula de recurrencia</strong> es una
+			<strong>relación matemática</strong> que permite expresar una
+			<strong>integral con un parámetro “n”</strong> (por ejemplo, un
+			exponente)
+			<strong
+				>en función de otra integral del mismo tipo pero con un
+				parámetro menor</strong
+			>, como $n-1$ o $n-2$.
+		</p>
+		<p>En otras palabras:</p>
+		<blockquote>
+			<p>
+				Es una <strong>regla que reduce</strong> una integral complicada
+				a otra <strong>más simple del mismo tipo</strong>, que se puede
+				resolver de manera repetida o recursiva.
+			</p>
+		</blockquote>
+		<p><strong>Objetivo principal</strong></p>
+		<p>
+			El objetivo es
+			<strong
+				>simplificar integrales que dependen de un exponente o
+				parámetro</strong
+			>
+			aplicando un proceso sistemático, paso a paso, hasta llegar a una
+			integral elemental (fácil de resolver).
+		</p>
+		<p><strong>Idea general</strong></p>
+		<p>Supón una integral del tipo:</p>
+		<p>$$ I_{n} = \int f(x , n) , dx $$</p>
+		<p>Si se encuentra una relación del tipo:</p>
+		<p>$$ I_{n} = a(n) , I_{n-1} + b(n) , g(x) $$</p>
+		<p>
+			entonces se dice que
+			<strong>esa relación es una fórmula de reducción</strong>.<br />
+			Permite obtener $I_{n}$​ conociendo $I_{n-1}$​.<br />
+			Este proceso se repite hasta llegar a una integral $I_{0}$​ o
+			$I_{1}$​, que se puede calcular directamente.
+		</p>
+		<h2>
+			Integración de funciones racionales e irracionales. Sustituciones de
+			Euler.
+		</h2>
+		<h3>Criterio de Hermite</h3>
+		<p>
+			$$ \int R \left( x , \left( \frac{px + q}{ax + b}
+			\right)^{\frac{\delta_{1}}{\theta_{1}}} , \left( \frac{px + q}{ax +
+			b} \right)^{\frac{\delta_{2}}{\theta_{2}}} , \dots , \left( \frac{px
+			+ q}{ax + b} \right)^{\frac{\delta_{n}}{\theta_{n}}} \right) $$
+		</p>
+		<p>$$ m = MCM(\theta_{1}, \theta_{2}, \dots, \theta_{n}) $$</p>
+		<p>
+			$$ \left( \frac{px + q}{ax + b} \right) = t^{m} \to x = \frac{b
+			t^{m} - q}{p - a t^{m}} \to dx = \frac{m(bp - aq)t^{m}}{(p - a
+			t^{m})^{2}} $$
+		</p>
+		<p>$$ \int \frac{M(t)}{N(t)} dt $$</p>
+		<hr />
+		<p>
+			$$ \int R \left( x , x^{\frac{\delta_{1}}{\theta_{1}}} ,
+			x^{\frac{\delta_{2}}{\theta_{2}}} , \dots ,
+			x^{\frac{\delta_{n}}{\theta_{n}}} \right) $$
+		</p>
+		<p>$$ m = MCM(\theta_{1}, \theta_{2}, \dots, \theta_{n}) $$</p>
+		<p>$$ x = t^{m} \to dx = m \cdot t^{m - 1} dt $$</p>
+		<p>$$ \int \frac{M(t)}{N(t)} dt $$</p>
+		<hr />
+		<p>
+			$$ \int \frac{P(x)}{(a_{1}x^{r} + \dots + b_{1}x +
+			c_{1})^{p}(a_{2}x^{s} + \dots + b_{2}x + c_{2})^{q}} = \frac{A_{r(p
+			- 2)}x^{r(p - 2)} + \dots + A_{0}}{(a_{1}x^{r} + \dots + b_{1}x +
+			c_{1})^{p - 1}} + \frac{B_{s(q - 2)}x^{s(q - 2)} + \dots +
+			B_{0}}{(a_{2}x^{s} + \dots + b_{2}x + c_{2})^{q - 1}} + \int
+			\frac{C_{r - 1}x^{r - 1} + \dots + C_{0}}{a_{1}x^{r} + \dots +
+			b_{1}x + c_{1}} + \int \frac{D_{s - 1}x^{s - 1} + \dots +
+			D_{0}}{a_{2}x^{s} + \dots + b_{2}x + c_{2}} $$
+		</p>
+		<h3>Sustitución de Euler</h3>
+		<p><strong>para integrales de la forma</strong></p>
+		<p>$$ \int M(x, \sqrt{ax^{2} + bx + c}) $$</p>
+		<p><strong>CASO 1</strong></p>
+		<p>
+			$$ a &gt; 0 $$ $$ \sqrt{ax^{2} + bx + c} = \pm \sqrt{a}x + t $$ $$ x
+			= \frac{t^{2} - c}{b - 2\sqrt{a}t} $$ $$ dx = \frac{-2\sqrt{a}t^{2}
+			+ 2bt - 2c\sqrt{a}}{(b - 2\sqrt{a}t)^{2}} $$
+		</p>
+		<p><strong>CASO 2</strong></p>
+		<p>
+			$$ c &gt; 0 $$ $$ \sqrt{ax^{2} + bx + c} = tx \pm \sqrt{c} $$ $$ x =
+			\frac{b - 2\sqrt{c}t}{t^{2} - a} $$ $$ dx = \frac{2\sqrt{c}t^{2} -
+			2bt + 2a\sqrt{c}}{(t^{2} - a)^{2}} $$
+		</p>
+		<p><strong>CASO 3</strong></p>
+		<p>
+			$$ ax^{2} + bx + c = a(x + r_{1})(x + r_{2}) $$ $$ \sqrt{ax^{2} + bx
+			+ c} = (x + r_{1})t \to \sqrt{a(x + r_{1})(x + r_{2})} = (x +
+			r_{1})t $$ $$ x = \frac{r_{1}t^{2} - a r_{2}}{t^{2} - a} $$ $$ dx =
+			\frac{2a t (r_{2} - r_{1})}{t^{2} - a} $$
+		</p>
+		<h2>Integración de binomios diferenciales: Método de Chebyshev.</h2>
+		<p>para integrales de la forma:</p>
+		<p>
+			$$ \int x^{m}(a + bx^{n})^{\frac{p}{q}} dx $$
+			<strong>CASO 1</strong>
+			$$ \frac{p}{q} \in \mathbb{R} $$
+		</p>
+		<p>
+			simplemente hay que desarrollar el binomio o hacer un cambio de
+			variable simple
+		</p>
+		<p><strong>CASO 2</strong></p>
+		<p>$$ \frac{m + 1}{n} \in \mathbb{R} $$</p>
+		<p>cambio de variable recomendado</p>
+		<p>$$ u = (a + b^{n})^{\frac{1}{q}} $$</p>
+		<p><strong>CASO 3</strong></p>
+		<p>$$ \frac{m + 1}{n} + \frac{p}{q} \in \mathbb{R} $$</p>
+		<p>cambio de variable recomendado</p>
+		<p>$$ u = \left( \frac{a + b^{n}}{x^{n}} \right)^{\frac{1}{q}} $$</p>
+		<h2>Integración de funciones racionales en seno y coseno.</h2>
+		<p>para integrales de la forma:</p>
+		<p>$$ \int R(\mathrm{sen}(x), \mathrm{cos}(x)) dx $$</p>
+		<p>se recomienda este cabio de variable</p>
+		<p>
+			$$ t = \tan\left( \frac{x}{2} \right) = \frac{\mathrm{sen}\left(
+			\frac{x}{2} \right)}{\mathrm{cos}\left( \frac{x}{2} \right)} =
+			\sqrt{\frac{1 - \mathrm{cos}\left( \frac{x}{2} \right)}{1 +
+			\mathrm{cos}\left( \frac{x}{2} \right)}} $$
+		</p>
+		<p>de donde se obtiene lo siguiente</p>
+		<p>
+			$$ \mathrm{cos}(x) = \frac{1 - t^{2}}{1 + t^{2}} $$ $$
+			\mathrm{sen}(x) = \frac{2t}{1 + t^{2}} $$ $$ \mathrm{tan}(x) =
+			\frac{2t}{1 - t^{2}} $$ $$ dx = \frac{2dt}{1 + t^{2}} $$
+		</p>
+		<h2>Sustitución homográfica o fraccionaria lineal</h2>
+		<p>
+			$$ \int \frac{dx}{(mx + n)\sqrt{ax^{2} + bx + c}} $$ $$ v =
+			\frac{1}{mx + n} $$ $$ x = \frac{1 - vn}{mv} $$ $$ dx =
+			-\frac{1}{v^{2}m} dv $$
+		</p>
+
+		<a href="./../../Index.html">volver</a>
+		<script src="js/mathjax-config.js"></script>
+		<script src="mathjax/es5/tex-mml-chtml.js"></script>
+	</body>
+</html>

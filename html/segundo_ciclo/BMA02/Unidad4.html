@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./../../../css/reset.css" />
+		<link rel="stylesheet" href="./../../../css/global.css" />
+		<link rel="stylesheet" href="./../../../css/components/resumenes.css" />
+	</head>
+	<body>
+		<p>
+			La <strong>integral definida</strong> no solo permite calcular áreas
+			bajo una curva, sino que también se aplica al cálculo de longitudes,
+			volúmenes, áreas de superficies, desarrollo de aproximaciones
+			polinómicas y en múltiples disciplinas como la física, ingeniería,
+			biología y economía.
+		</p>
+		<hr />
+		<h2>Áreas de regiones planas en coordenadas:</h2>
+		<h3>Rectangulares.</h3>
+		<p>
+			El área entre una curva $y = f(x)$, el eje $x$ y las rectas $x = a$
+			y $x = b$ está dada por:
+		</p>
+		<p>$$ A = \int_a^b |f(x)| , dx $$</p>
+		<p>
+			Si la curva está por encima del eje $x$ (es decir, $f(x) \geq 0$ ,
+			el área es:
+		</p>
+		<p>$$ A = \int_{a}^{b} f(x) , dx $$</p>
+		<p>
+			Cuando el área está <strong>entre dos curvas</strong>, $y = f(x)$ y
+			$y = g(x)$ con $f(x) \geq g(x)$:
+		</p>
+		<p>
+			$$<br />
+			A = \int_{a}^{b} [f(x) - g(x)] , dx<br />
+			$$
+		</p>
+		<hr />
+		<h3>Polares.</h3>
+		<p>
+			En coordenadas polares, una región delimitada por la curva $r =
+			f(\theta)$, entre los ángulos $\theta = \alpha$ y $\theta = \beta$,
+			tiene área:
+		</p>
+		<p>$$ A = \frac{1}{2} \int_\alpha^\beta [f(\theta)]^2 , d\theta $$</p>
+		<hr />
+		<h3>Paramétricas</h3>
+		<p>Si la curva está dada por:</p>
+		<p>$$ x = x(t), \quad y = y(t), \quad t \in [t_1, t_2] $$</p>
+		<p>entonces el área bajo la curva respecto al eje $x$ es:</p>
+		<p>$$ A = \int_{t_1}^{t_2} y(t) , x'(t) , dt $$</p>
+		<hr />
+		<h2>
+			Longitud de arco en coordenadas rectangulares, polares y
+			paramétricas.
+		</h2>
+		<p>
+			La longitud de una curva puede calcularse con la integral definida,
+			dependiendo del sistema de coordenadas:
+		</p>
+		<p>**Coordenadas rectangulares</p>
+		<p>Si $y = f(x)$, $a \le x \le b$:</p>
+		<p>$$ L = \int_a^b \sqrt{1 + [f'(x)]^2} , dx $$</p>
+		<p><strong>Coordenadas paramétricas</strong></p>
+		<p>Si $x = x(t)$ , $y = y(t)$:</p>
+		<p>$$ L = \int_{t_1}^{t_2} \sqrt{(x'(t))^2 + (y'(t))^2} , dt $$</p>
+		<p><strong>Coordenadas polares</strong></p>
+		<p>Si $r = f(\theta)$:</p>
+		<p>
+			$$ L = \int_\alpha^\beta \sqrt{[f(\theta)]^2 + [f'(\theta)]^2} ,
+			d\theta $$
+		</p>
+		<hr />
+		<h2>Volumen de sólidos de revolución:</h2>
+		<p>
+			Cuando una región plana gira alrededor de un eje, se genera un
+			<strong>sólido de revolución</strong>, cuyo volumen puede calcularse
+			de diferentes formas:
+		</p>
+		<h3>Método del disco.</h3>
+		<p>
+			Usado cuando el sólido se genera girando una curva $y = f(x)$
+			alrededor del eje $x$:
+		</p>
+		<p>$$ V = \pi \int_a^b [f(x)]^2 , dx $$</p>
+		<p>Si la rotación es alrededor del eje $y$:</p>
+		<p>$$ V = \pi \int_c^d [g(y)]^2 , dy $$</p>
+		<hr />
+		<h3>Método del anillo.</h3>
+		<p>
+			Si la región está entre dos curvas $y = f(x)$ (superior) y $y =
+			g(x)$ (inferior):
+		</p>
+		<p>$$ V = \pi \int_a^b ([f(x)]^2 - [g(x)]^2) , dx $$</p>
+		<hr />
+		<h3>Método de la corteza cilíndrica.</h3>
+		<p>
+			Cuando la rotación es más cómoda al girar alrededor del eje $y$, se
+			usan cilindros delgados:
+		</p>
+		<p>$$ V = 2\pi \int_a^b x , f(x) , dx $$</p>
+		<p>
+			En general, el radio del cilindro es la distancia al eje de
+			rotación, y la altura es el valor de la función.
+		</p>
+		<hr />
+		<h2>Volumen de sólidos:</h2>
+		<p>
+			No todos los sólidos se obtienen por revolución; algunos tienen
+			secciones conocidas.
+		</p>
+		<h3>Método de las secciones transversales.</h3>
+		<p>
+			Si la sección transversal $A(x)$ perpendicular al eje $x$ varía con
+			$x$:
+		</p>
+		<p>$$ V = \int_a^b A(x) , dx $$</p>
+		<p>
+			Ejemplo: Si la sección transversal es un cuadrado de lado $y =
+			\sqrt{x}$:
+		</p>
+		<p>
+			$$ A(x) = (\sqrt{x})^2 = x \quad \Rightarrow \quad V = \int_0^4 x,dx
+			= 8 $$
+		</p>
+		<hr />
+		<h3>Método de las secciones planas paralelas conocidas.</h3>
+		<p>
+			Cuando las secciones transversales son de forma geométrica conocida
+			(círculo, triángulo, etc.), se usa la relación entre el área de la
+			sección y su parámetro de posición:
+		</p>
+		<p>$$ V = \int_a^b A(x) , dx $$</p>
+		<p>donde $A(x)$ depende de la forma:</p>
+		<ul>
+			<li>Triángulo: $A = \frac{1}{2}bh$</li>
+			<li>Círculo: $A = \pi r^2$</li>
+			<li>Semicírculo: $A = \frac{\pi r^2}{2}$, etc.</li>
+		</ul>
+		<hr />
+		<h2>Área de superficies de revolución.</h2>
+		<p>
+			Cuando una curva ( y = f(x) ) gira alrededor del eje (x), el área de
+			la superficie generada es:
+		</p>
+		<p>$$ S = 2\pi \int_a^b f(x) \sqrt{1 + [f'(x)]^2} , dx $$</p>
+		<p>Si la rotación es alrededor del eje (y):</p>
+		<p>$$ S = 2\pi \int_c^d x(y) \sqrt{1 + [x'(y)]^2} , dy $$</p>
+		<p>
+			Ejemplo: Superficie del paraboloide generado por $y = x^{2}$, $0 \le
+			x \le 1$:
+		</p>
+		<p>$$ S = 2 \pi \int_{0}^{1} x^{2} \sqrt{1 + (2x)^{2}} dx $$</p>
+		<hr />
+		<h2>Teorema de Pappus.</h2>
+		<p>
+			Permite calcular
+			<strong>áreas o volúmenes de revolución</strong> sin integrar
+			directamente.
+		</p>
+		<p><strong>Primer teorema de Pappus (área de revolución):</strong></p>
+		<p>
+			El área generada al girar una curva plana alrededor de un eje
+			externo es:
+		</p>
+		<p>$$ A = L \cdot (2\pi \bar{r}) $$</p>
+		<p>donde:</p>
+		<ul>
+			<li>$L$ = longitud de la curva.</li>
+			<li>
+				$\bar{r}$ = distancia del centroide de la curva al eje de
+				rotación.
+			</li>
+		</ul>
+		<hr />
+		<p>
+			<strong>Segundo teorema de Pappus (volumen de revolución):</strong>
+		</p>
+		<p>
+			El volumen del sólido generado al girar una región plana alrededor
+			de un eje externo es:
+		</p>
+		<p>$$ V = A \cdot (2\pi \bar{r}) $$</p>
+		<p>donde:</p>
+		<ul>
+			<li>$A$ = área de la región plana.</li>
+			<li>
+				$\bar{r}$ = distancia del centroide de la región al eje de
+				rotación.
+			</li>
+		</ul>
+		<hr />
+		<h2>Polinomio de Taylor.</h2>
+		<p>
+			El <strong>polinomio de Taylor</strong> es una herramienta analítica
+			que usa derivadas para aproximar funciones mediante polinomios.
+		</p>
+		<p>
+			Sea $f(x)$ una función con derivadas sucesivas en torno a un punto
+			$a$:
+		</p>
+		<p>
+			$$ P_n(x) = f(a) + f'(a)(x - a) + \frac{f''(a)}{2!}(x - a)^2 + \dots
+			+ \frac{f^{(n)}(a)}{n!}(x - a)^n $$
+		</p>
+		<ul>
+			<li>
+				El polinomio <strong>aproxima</strong> el valor de la función
+				cerca de $a$.
+			</li>
+			<li>
+				El <strong>resto o error</strong> se calcula con el término
+				siguiente del desarrollo.
+			</li>
+		</ul>
+		<hr />
+		<h2>Aplicaciones de apoyo a diversas disciplinas.</h2>
+		<p>
+			La integral definida tiene un papel esencial en distintas áreas del
+			conocimiento:
+		</p>
+		<ul>
+			<li>
+				<strong>Física:</strong>
+				<ul>
+					<li>
+						Cálculo de trabajo, energía, momento, presión, centro de
+						masa.
+					</li>
+					<li>
+						Cálculo de trayectorias, longitudes y volúmenes físicos.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Ingeniería:</strong>
+				<ul>
+					<li>
+						Análisis estructural, cálculo de esfuerzos, flujo de
+						calor, corriente eléctrica.
+					</li>
+					<li>
+						Diseño de tanques, conductos y piezas de revolución.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Economía:</strong>
+				<ul>
+					<li>
+						Cálculo del costo total, ingreso y excedente del
+						consumidor.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Biología y Medicina:</strong>
+				<ul>
+					<li>
+						Crecimiento poblacional, volumen de órganos,
+						concentración de sustancias.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Geometría y arquitectura:</strong>
+				<ul>
+					<li>
+						Diseño de superficies y volúmenes de estructuras curvas.
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<a href="./../../../Index.html"></a>
+		<script src="js/mathjax-config.js"></script>
+		<script src="mathjax/es5/tex-mml-chtml.js"></script>
+	</body>
+</html>

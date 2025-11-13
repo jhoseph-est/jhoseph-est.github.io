@@ -1,0 +1,170 @@
+/* ===== ESTILOS BASE ===== */
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  color: #222;
+}
+
+header {
+  background: linear-gradient(90deg, #4a90e2, #7b61ff);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.bloque {
+  background: white;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ===== 1️⃣ TABLERO DE IDEAS ===== */
+.tablero .tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.tarjeta {
+  background: #eaf4ff;
+  border-left: 6px solid #007bff;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+.tarjeta:hover { transform: translateY(-4px); }
+
+/* ===== 2️⃣ LÍNEA DE TIEMPO ===== */
+.linea-tiempo .pasos {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: relative;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.linea-tiempo .pasos::before {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  left: 10%;
+  right: 10%;
+  height: 4px;
+  background: #007bff;
+  border-radius: 2px;
+}
+
+.paso {
+  position: relative;
+  text-align: center;
+  background: #fff;
+  padding: 0.8rem;
+  border-radius: 10px;
+  flex: 1;
+}
+
+.numero {
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: relative;
+  top: -20px;
+}
+
+/* ===== 3️⃣ JERARQUÍA ANIDADA ===== */
+.jerarquico .nivel {
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid #ccc;
+}
+
+.nivel-1 { border-color: #007bff; }
+.nivel-2 { border-color: #28a745; background: #f4fff5; }
+.nivel-3 { border-color: #ffc107; background: #fffbe6; }
+
+/* ===== 4️⃣ ESQUEMA RADIAL ===== */
+.radial {
+  position: relative;
+  height: 300px;
+  background: #f0f4ff;
+  overflow: hidden;
+}
+
+.radial .centro {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #4a90e2;
+  color: white;
+  border-radius: 50%;
+  width: 120px; height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.radial .nota {
+  position: absolute;
+  background: white;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 120px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.nota1 { top: 20px; left: 50%; transform: translateX(-50%); }
+.nota2 { right: 20px; top: 50%; transform: translateY(-50%); }
+.nota3 { bottom: 20px; left: 50%; transform: translateX(-50%); }
+.nota4 { left: 20px; top: 50%; transform: translateY(-50%); }
+
+/* ===== 5️⃣ PANEL COMPARATIVO ===== */
+.panel-contenedor {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.panel-izq, .panel-der {
+  flex: 1;
+  background: #f9f9ff;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 2px solid #d0d7ff;
+}
+
+.panel-izq { border-left: 6px solid #28a745; }
+.panel-der { border-left: 6px solid #dc3545; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+  .linea-tiempo .pasos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .panel-contenedor {
+    flex-direction: column;
+  }
+
+  .radial { height: 400px; }
+}

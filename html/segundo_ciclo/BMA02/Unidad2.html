@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./../../../css/reset.css" />
+		<link rel="stylesheet" href="./../../../css/global.css" />
+		<link rel="stylesheet" href="./../../../css/components/resumenes.css" />
+	</head>
+	<body>
+		<h2>La integral como límite de una suma: Suma superior e inferior</h2>
+		<p>
+			La <strong>integral definida</strong> surge como el límite de una
+			suma de áreas aproximadas bajo una curva.<br />
+			Sea $f(x)$ una función continua y no negativa en el intervalo $[a,
+			b]$. Dividimos el intervalo en $n$ subintervalos de igual longitud:
+		</p>
+		<p>$$ \Delta x = \frac{b - a}{n} $$</p>
+		<p>Cada subintervalo tiene puntos:</p>
+		<p>
+			$$ x_0 = a, , x_1 = a + \Delta x, , x_2 = a + 2 \Delta x, , \dots, ,
+			x_n = b $$
+		</p>
+		<p>
+			En cada subintervalo tomamos un punto $x_{i}^{*}$ (cualquiera dentro
+			del subintervalo) y formamos una **suma de Riemann**:
+		</p>
+		<p>$$ S_{n} = \sum_{i=1}^{n} f(x_{i}^{*}) , \Delta x $$</p>
+		<p>
+			El valor de la <strong>integral definida</strong> es el
+			<strong>límite de esta suma</strong> cuando el número de
+			subdivisiones tiende a infinito:
+		</p>
+		<p>
+			$$ \int_{a}^{b} f(x) , dx = \lim_{n \to \infty} \sum_{i=1}^{n}
+			f(x_{i}^{*}) , \Delta x $$ **Tipos de sumas de Riemann**
+		</p>
+		<p>Depende del punto de muestra elegido en cada subintervalo:</p>
+		<ol>
+			<li><strong>Suma por la izquierda</strong></li>
+		</ol>
+		<p>$$ S_{\text{izq}} = \sum_{i=1}^{n} f(x_{i-1}) , \Delta x $$</p>
+		<p>Se usa el extremo izquierdo de cada subintervalo.</p>
+		<ol>
+			<li><strong>Suma por la derecha</strong></li>
+		</ol>
+		<p>$$ S_{\text{der}} = \sum_{i=1}^{n} f(x_i) , \Delta x $$</p>
+		<p>Se usa el extremo derecho.</p>
+		<ol start="2">
+			<li>
+				<strong>Suma por el punto medio</strong> $$ S_{\text{medio}} =
+				\sum_{i=1}^{n} f ! \left( \frac{x_{i-1}+x_i}{2} \right) , \Delta
+				x $$
+			</li>
+		</ol>
+		<p>Se usa el punto medio, que suele dar mejor aproximación.</p>
+		<ul>
+			<li>
+				<strong>Suma inferior:</strong> se usa el valor mínimo de $f(x)$
+				en cada subintervalo.
+			</li>
+		</ul>
+		<p>$$ m_{x} = inf { f(x) \mid x \in [x_{K-1} ; x_{K}] } $$</p>
+		<ul>
+			<li>
+				<strong>Suma superior:</strong> se usa el valor máximo de $f(x)$
+				en cada subintervalo.
+			</li>
+		</ul>
+		<p>$$ M_{x} = sup { f(x) \mid x \in [x_{K-1} ; x_{K}] } $$</p>
+		<p>
+			Si ambas sumas tienden al mismo valor cuando $n \to \infty$, ese
+			valor común es la <strong>integral definida</strong>.
+		</p>
+		<hr />
+		<h2>Definición. Propiedades.</h2>
+		<p>
+			Sea $f(x)$ una función acotada en $[a, b]$.<br />
+			Si existe el límite:
+		</p>
+		<p>
+			$$ \int_a^b f(x),dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(a + k
+			\Delta x) , \Delta x $$
+		</p>
+		<p>donde $$ \Delta x = \frac{a + b}{n} $$</p>
+		<p>
+			y este
+			<strong>no depende de la elección de los puntos</strong>
+			$x_{i}^{*}$, decimos que ( f ) es **integrable en el sentido de
+			Riemann** en $[a, b]$.
+		</p>
+		<p><strong>Propiedades de la integral definida</strong></p>
+		<p>Si $f$ y $g$ son integrables en $[a, b]$, y $c$ es una constante:</p>
+		<ol>
+			<li>$$ \int_{a}^{b} dx = b - a $$</li>
+			<li>$$ \int_{a}^{b} k dx =k (b - a) $$</li>
+			<li>$$ \int_{a}^{b} k f(x) dx = k \int_{a}^{b} f(x) dx $$</li>
+			<li>
+				$$ \int_{a}^{b} \sum_{x = 1} f_{i} (x) dx = \sum_{x = 1}
+				\int_{a}^{b} f_{i} (x) dx $$ desarrollamos la sumatoria
+			</li>
+			<li>
+				Si, $b &gt; a$ entonces: $$ \int_{b}^{a} f(x) dx = -
+				\int_{a}^{b} f(x) dx $$
+			</li>
+			<li>
+				si $a$ esta en el dominio de f, entonces $$ \int_{a}^{a} f(x) dx
+				= 0 $$
+			</li>
+			<li>
+				si $f$ es integrable en los sub intervalos $[a ; c]$ y $[c ; b]$
+				entonces: $$ \int_{a}^{b} f(x) dx = \int_{a}^{c} f(x) dx +
+				\int_{c}^{b} f(x) dx $$
+			</li>
+			<li>
+				si $f(x) \leq g(x)$ en $[a ; b]$ entonces $$ \int_{a}^{b} f(x)
+				dx \leq \int_{a}^{b} g(x) dx $$
+			</li>
+			<li>
+				si $f(x) \geq 0$ en $[a ; b]$ entonces $$ \int_{a}^{b} f(x) dx
+				\geq 0 , \forall x \in [a ; b] $$
+			</li>
+			<li>
+				si $m \leq f(x) \leq M$ en $[a ; b]$ , entonces $$ m (b - a)
+				\leq \int_{a}^{b} f(x) dx \leq M (b - a)$$
+			</li>
+			<li>
+				si $\mid f \mid$ es integrable en $[a ; b]$ entonces $$ \mid
+				\int_{a}^{b} f(x) dx \mid \leq \int_{a}^{b} \mid f(x) \mid dx$$
+			</li>
+			<li>
+				se verifica $$ \int_{a}^{b} f(x) dx = \int_{a \pm q}^{b \pm q}
+				f(x\mp q) dx\ \ q \in \mathbb{Q} $$
+			</li>
+			<li>
+				se cumple $$ \int_{a}^{b} f(x) dx = \frac{1}{k} \int_{ak}^{bk}
+				f\left( \frac{x}{k} \right) dx $$
+			</li>
+			<li>
+				se cumple $$ \int_{a}^{b} f(x) dx = k \int_{a k^{-1}}^{b k^{-1}}
+				f\left( xk \right) dx $$
+			</li>
+			<li>
+				si $f$ es una función continua en $[0 ; c]$ entonces se verifica
+				que $$ \int_{0}^{c} f(x) dx = \int_{0}^{c} f(c - x) dx $$
+			</li>
+			<li>
+				si $f$ es una función continua y par en el intervalo simétrico
+				alrededor del origen $[-c ; c]$ entonces se verifica que $$
+				\int_{-c}^{c} f(x) dx = 2 \int_{0}^{c} f(x) dx $$
+			</li>
+			<li>
+				si $f$ es una función continua y impar en el intervalo simétrico
+				alrededor del origen $[-c ; c]$ entonces se verifica que $$
+				\int_{-c}^{c} f(x) dx = 0 $$
+			</li>
+			<li>
+				sea $f$ una función definida y acotada en $[a ; b]$ cura regla
+				de correspondencia de $f$ es $$ \begin{array}{cc} f_{1} (x) ; a
+				\leq x \leq c_{1} \ f_{2} (x) ; \ c_{1} \leq x \leq c_{2} \
+				f_{3} (x) ; \ c_{2} \leq x \leq b \ \end{array} $$ si $c_k$ son
+				puntos de discontinuidad, entonces se verifica que $$
+				\int_{a}^{b} f(x) dx = \int_{a}^{c_{1}} f_{1} (x) dx +
+				\int_{c_{1}}^{c_{2}} f_{2} (x) dx + \int_{c_{2}}^{b} f_{3} (x)
+				dx $$
+			</li>
+		</ol>
+		<h2>Interpretación de la integral definida.</h2>
+		<p>
+			La <strong>integral definida</strong> representa el
+			<strong>área bajo la curva</strong> $y = f(x)$ entre $x = a$ y $x =
+			b$, considerando el eje ( x ) como referencia.
+		</p>
+		<ul>
+			<li>
+				<p>Si $f(x) \geq 0$: el área es positiva.</p>
+			</li>
+			<li>
+				<p>Si $f(x) \leq 0$: el área es negativa.</p>
+			</li>
+			<li>
+				<p>
+					Si cambia de signo, el área neta es la
+					<strong>diferencia entre áreas positivas y negativas</strong
+					>.
+				</p>
+			</li>
+		</ul>
+		<hr />
+		<h2>Cálculo del área como límite de una aproximación.</h2>
+		<p>
+			El área bajo la curva se aproxima con
+			<strong>rectángulos</strong> cuya base es $\Delta x$ y altura
+			$f(x_{i}^{*})$:
+		</p>
+		<p>$$ A \approx \sum_{i=1}^{n} f(x_i^*) \Delta x $$</p>
+		<p>En el límite cuando $n \to \infty$:</p>
+		<p>$$ A = \int_a^b f(x) dx $$</p>
+		<hr />
+		<h2>Teoremas fundamentales del cálculo.</h2>
+		<p><strong>Primer Teorema Fundamental:</strong></p>
+		<p>Si $f$ es continua en $[a, b]$, y definimos</p>
+		<p>$$ F(x) = \int_{a}^{x} f(t),dt $$</p>
+		<p>
+			entonces $F'(x) = f(x)$.<br />
+			Esto significa que
+			<strong
+				>la derivación y la integración son operaciones inversas</strong
+			>.
+		</p>
+		<p><strong>Segundo Teorema Fundamental:</strong></p>
+		<p>Si $F$ es una antiderivada de $f$ en $[a, b]$, entonces:</p>
+		<p>$$ \int_{a}^{b} f(x)dx = F(x) \mid_{a}^{b} = F(b) - F(a) $$</p>
+		<h3>cambio de variable en una integral definida</h3>
+		<p>
+			Sea $f$ continua en un intervalo $\mathbb{I}$ y $x = g(u)$ una
+			función <strong>diferenciable</strong> y
+			<strong>monótona</strong> en $[u_{1}, u_{2}]$, tal que:
+		</p>
+		<p>$$ g(u_1) = a, \quad g(u_2) = b $$</p>
+		<p>Entonces:</p>
+		<p>
+			$$ \int_{a}^{b} f(x) , dx = \int_{u_{1}}^{u_{2}} f(g(u)) ,
+			g^{\prime}(u) , du $$
+		</p>
+		<h3>integración por partes de una integral definida</h3>
+		<p>
+			Si $u(x)$ y $v(x)$ son funciones continuas y derivables en $[a,b]$:
+		</p>
+		<p>$$ \int_a^b u,dv = \left[u,v\right]_a^b - \int_a^b v,du $$</p>
+		<h2>Teorema del valor medio e intermedio.</h2>
+		<p>a) <strong>Teorema del valor medio para integrales:</strong></p>
+		<p>
+			Si $f$ es continua en $[a, b]$, existe un punto $c \in [a, b]$ tal
+			que:
+		</p>
+		<p>$$ \int_a^b f(x),dx = f(c)(b - a) $$</p>
+		<p>
+			Geométricamente: existe una altura $f(c)$ tal que el área bajo la
+			curva es igual al área de un rectángulo de base $b - a$ y altura
+			$f(c)$.
+		</p>
+		<p>b) <strong>Teorema del valor intermedio para integrales:</strong></p>
+		<p>Si $f$ es continua, la función</p>
+		<p>$$ F(x) = \int_a^x f(t),dt $$</p>
+		<p>
+			es <strong>continua y derivable</strong>, y toma
+			<strong>todos los valores intermedios</strong> entre $F(a)$ y
+			$F(b)$.
+		</p>
+		<h2>Funciones no integrables.</h2>
+		<p>
+			Una función <strong>no es integrable</strong> (en el sentido de
+			Riemann) cuando <strong>no es acotada</strong> o
+			<strong>presenta infinitas discontinuidades</strong> en el
+			intervalo.
+		</p>
+		<h2>
+			Definición de la función logaritmo natural y su relación con el
+			número $e$.
+		</h2>
+		<p>
+			El <strong>logaritmo natural</strong> se define a partir de la
+			integral:
+		</p>
+		<p>$$ \ln(x) = \int_1^x \frac{1}{t},dt, \quad x &gt; 0 $$</p>
+		<p>De esta definición se cumple:</p>
+		<p>$$ \frac{d}{dx}(\ln x) = \frac{1}{x} $$</p>
+		<p>
+			Además, el número ( e ) se define como el único número real tal que:
+		</p>
+		<p>
+			$$ \ln(e) = 1 \quad \Rightarrow \quad \int_1^e \frac{1}{t},dt = 1 $$
+		</p>
+		<p>
+			Por lo tanto, $e \approx 2.71828$ es la
+			<strong>base de los logaritmos naturales</strong>.
+		</p>
+		<hr />
+		<h2>Aplicaciones de apoyo a diversas disciplinas.</h2>
+		<p>
+			La integral definida tiene aplicaciones en casi todas las ramas de
+			la ciencia e ingeniería:
+		</p>
+		<table>
+			<thead>
+				<tr>
+					<th>Área</th>
+					<th>Aplicación principal</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><strong>Física</strong></td>
+					<td>
+						Cálculo de trabajo, energía, centro de masa, flujo
+						eléctrico, movimiento.
+					</td>
+				</tr>
+				<tr>
+					<td><strong>Ingeniería</strong></td>
+					<td>
+						Cálculo de áreas, volúmenes, caudales, esfuerzo, carga y
+						distribución.
+					</td>
+				</tr>
+				<tr>
+					<td><strong>Economía</strong></td>
+					<td>
+						Cálculo del ingreso total, costo acumulado, excedente
+						del consumidor.
+					</td>
+				</tr>
+				<tr>
+					<td><strong>Biología</strong></td>
+					<td>
+						Modelos de crecimiento poblacional, tasa de mortalidad,
+						difusión de sustancias.
+					</td>
+				</tr>
+				<tr>
+					<td><strong>Matemática pura</strong></td>
+					<td>
+						Definición de nuevas funciones, análisis de convergencia
+						y series.
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<a href="./../../../Index.html"></a>
+		<script src="js/mathjax-config.js"></script>
+		<script src="mathjax/es5/tex-mml-chtml.js"></script>
+	</body>
+</html>

@@ -1,0 +1,128 @@
+/* ======== ESTILOS GENERALES ======== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: #f5f7fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 5px solid #2c6cb0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.bloque {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== BLOQUE SIMPLE ======== */
+.bloque-simple {
+  border-left: 6px solid #28a745;
+}
+
+/* ======== BLOQUE CON NOTA LATERAL ======== */
+.bloque-lateral {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  border-left: 6px solid #ffc107;
+}
+
+.bloque-lateral .texto-principal {
+  flex: 2;
+}
+
+.bloque-lateral .nota {
+  flex: 1;
+  background: #fffbe6;
+  border-left: 4px solid #ffca2c;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+/* ======== BLOQUES HORIZONTALES SECUENCIALES ======== */
+.bloque-secuencial {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  border-left: 6px solid #17a2b8;
+  background: #e8f9fc;
+}
+
+.item-secuencia {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ======== BLOQUE CON IMAGEN ======== */
+.bloque-imagen {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border-left: 6px solid #6f42c1;
+  background: #f3e8ff;
+}
+
+.bloque-imagen img {
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+.bloque-imagen .texto {
+  flex: 1;
+}
+
+/* ======== BLOQUES COMPARATIVOS ======== */
+.bloque-comparativo {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-left: 6px solid #dc3545;
+  background: #fde8e8;
+}
+
+.columna {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 800px) {
+  .bloque-lateral, .bloque-imagen, .bloque-comparativo, .bloque-secuencial {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+footer {
+  background: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}

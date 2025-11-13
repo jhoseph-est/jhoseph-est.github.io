@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Menú Interactivo</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>🌐 Menú Interactivo</header>
+
+		<nav>
+			<button onclick="mostrarSeccion('inicio')">Inicio</button>
+			<button onclick="mostrarSeccion('nosotros')">Nosotros</button>
+			<button onclick="mostrarSeccion('servicios')">Servicios</button>
+			<button onclick="mostrarSeccion('contacto')">Contacto</button>
+		</nav>
+
+		<main id="contenido">
+			<section id="inicio" class="seccion activa">
+				<h2>🏠 Inicio</h2>
+				<p>
+					Bienvenido a nuestra página. Aquí encontrarás las últimas
+					novedades y actualizaciones.
+				</p>
+			</section>
+
+			<section id="nosotros" class="seccion">
+				<h2>👥 Nosotros</h2>
+				<p>
+					Somos un equipo comprometido con ofrecerte las mejores
+					soluciones tecnológicas y de desarrollo web.
+				</p>
+			</section>
+
+			<section id="servicios" class="seccion">
+				<h2>💼 Servicios</h2>
+				<p>
+					Ofrecemos servicios de diseño, programación, mantenimiento
+					técnico y asesoramiento personalizado.
+				</p>
+			</section>
+
+			<section id="contacto" class="seccion">
+				<h2>📞 Contacto</h2>
+				<p>
+					Puedes escribirnos a
+					<a href="mailto:contacto@empresa.com"
+						>contacto@empresa.com</a
+					>
+					o llamarnos al +51 999 999 999.
+				</p>
+			</section>
+		</main>
+
+		<script src="script.js"></script>
+	</body>
+</html>

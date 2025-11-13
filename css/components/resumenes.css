@@ -1,0 +1,41 @@
+body {
+	font-family: system-ui, sans-serif;
+	background: #0e1628;
+	color: #e8ecf2;
+	margin: 0;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	color: #7dd3fc;
+}
+
+.container {
+	display: flex;
+	gap: 20px;
+	height: 80vh;
+}
+
+textarea {
+	width: 50%;
+	height: 100%;
+	background: #111a2f;
+	color: #e8ecf2;
+	border: 1px solid #333;
+	border-radius: 8px;
+	padding: 12px;
+	font-size: 16px;
+	font-family: monospace;
+	resize: none;
+}
+
+#preview {
+	width: 50%;
+	height: 100%;
+	background: #0b1220;
+	border: 1px dashed #333;
+	border-radius: 8px;
+	padding: 20px;
+	overflow-y: auto;
+}
